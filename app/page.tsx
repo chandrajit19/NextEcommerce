@@ -1,103 +1,121 @@
-import Image from "next/image";
+import Image from 'next/image';
+import heroImage from '../public/heroimg.webp';
+import pic1 from '../public/pic1.webp';
+import pic2 from '../public/pic2.webp';
+import pic3 from '../public/pic3.webp';
+import Link from 'next/link';
+const Home=()=>{
+   return(<section className='min-h-full'>
+           <section className="container mx-auto bg-gradient-to-r from-slate-800 via-gray-800 to-slate-900 grid grid-cols-12 gap-4 py-8 px-4 text-white">
+               <div className=" text-white col-span-12 sm:col-span-6 text-center my-auto">
+                   <Image
+                        className='w-[30%] h-auto inline-block'
+                        src={heroImage}
+                        alt="Landscape picture"
+                        width={2179}
+                        height={2542}
+                        loading='lazy'
+                     />
+               </div>
+              <div className="text-white col-span-12 sm:col-span-6 text-center sm:text-end my-auto px-4 sm:px-6 py-8 sm:py-12">
+                     <h2 className="text-3xl sm:text-4xl font-bold mb-4 leading-tight">
+                        Discover Premium Products at Unbeatable Prices
+                     </h2>
+                     <p className="text-lg mb-6">
+                        Explore the latest trends and must-haves in fashion, beauty, and lifestyle.
+                     </p>
+                     <Link 
+                        href="/products" 
+                        className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md animate-pulse"
+                     >
+                        Explore Products
+                     </Link>
+                     </div>
+            </section>
+                  <section className="container mx-auto py-8 px-4">
+                  <div className=" mb-8">
+                     <h2 className="text-2xl font-bold">Customer Testimonials</h2>
+                     <p className="text-lg leading-relaxed max-w-2xl ">Real customers, real feedback — we pride ourselves on fast delivery and top-notch product quality.</p>
+                  </div>
 
-export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                     <article className="bg-white/5 p-6 rounded-lg shadow-sm overflow-hidden">
+                        <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 float-right ml-4 rounded-full overflow-hidden">
+                           <Image
+                              src={pic1}                
+                              alt="John D. avatar"
+                              width={2179}              
+                              height={2542}             
+                              sizes="(max-width: 640px) 64px, (max-width: 1024px) 80px, 96px"
+                              className="object-cover w-full h-full"
+                              loading="lazy"
+                           />
+                        </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+                           <h3 className="text-xl font-bold mb-2">John D.</h3>
+                           <p className="text-lg leading-relaxed">
+                              I had a fantastic shopping experience! The product quality is top-notch and the delivery was super fast.
+                           </p>
+                     </article> 
+                       
+                        <article className="bg-white/5 p-6 rounded-lg shadow-sm overflow-hidden">
+                        <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 float-right ml-4 rounded-full overflow-hidden">
+                           <Image
+                              src={pic2}                
+                              alt="John D. avatar"
+                              width={2179}              
+                              height={2542}             
+                              sizes="(max-width: 640px) 64px, (max-width: 1024px) 80px, 96px"
+                              className="object-cover w-full h-full"
+                              loading="lazy"
+                           />
+                        </div>
+
+                           <h3 className="text-xl font-bold mb-2">Jane S.</h3>
+                           <p className="text-lg leading-relaxed">
+                              Great selection of items at unbeatable prices. I will definitely be back for more!
+                           </p>
+                     </article> 
+
+                        <article className="bg-white/5 p-6 rounded-lg shadow-sm overflow-hidden">
+                        <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 float-right ml-4 rounded-full overflow-hidden">
+                           <Image
+                              src={pic3}                
+                              alt="John D. avatar"
+                              width={2179}              
+                              height={2542}             
+                              sizes="(max-width: 640px) 64px, (max-width: 1024px) 80px, 96px"
+                              className="object-cover w-full h-full"
+                              loading="lazy"
+                           />
+                        </div>
+
+                           <h3 className="text-xl font-bold mb-2">Alex P.</h3>
+                           <p className="text-lg leading-relaxed">
+                              Amazing customer support and fast delivery. Highly recommended!
+                           </p>
+                     </article>  
+                            <article className="bg-white/5 p-6 rounded-lg shadow-sm overflow-hidden">
+                        <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 float-right ml-4 rounded-full overflow-hidden">
+                           <Image
+                              src={pic2}                
+                              alt="John D. avatar"
+                              width={2179}              
+                              height={2542}             
+                              sizes="(max-width: 640px) 64px, (max-width: 1024px) 80px, 96px"
+                              className="object-cover w-full h-full"
+                              loading="lazy"
+                           />
+                        </div>
+
+                           <h3 className="text-xl font-bold mb-2">Tene P.</h3>
+                           <p className="text-lg leading-relaxed">
+                              Great choise of items at unbelivele prices. I is one of my best platform!
+                           </p>
+                     </article>  
+                  </div>
+        </section>
+
+   </section>)
 }
+export default Home; 

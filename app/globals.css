@@ -1,26 +1,51 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap');
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+:root{
+  --font-inter: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --font-poppins: 'Poppins', var(--font-inter);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-poppins);
+  --brand-color: #0ea5a4;
+  --text-color: #111827;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* headings */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+  /* margin: 0 0 0.5rem 0; */
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+h1 { font-size: 1.2rem; line-height: 1.1; }
+h2 { font-size: 1.5rem; line-height: 1.15; }
+h3 { font-size: 1.125rem; line-height: 1.2; }
+
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  /* margin: 0 0 1rem 0; */
 }
+
+.product-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+
+.lead { font-size: 1.125rem; font-weight: 500; }
