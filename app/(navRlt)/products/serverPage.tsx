@@ -123,7 +123,7 @@ const ProductsClient = ({ list }: { list: Product[] }) => {
                         <p className="text-sm text-slate-500 mt-1">{obj.description}</p>
 
                         <div className="mt-3 flex items-center justify-between">
-                          <div className="font-bold">{obj.price}</div>
+                          <div className="font-bold">₹{obj.price}</div>
                           <Link href={`/products/${obj.id}`} className="text-sm text-teal-600">View</Link>
                         </div>
                       </div>
